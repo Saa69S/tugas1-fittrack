@@ -1,0 +1,4 @@
+# Hasil kompilasi
+out/
+target/
+*.class
