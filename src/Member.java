@@ -85,4 +85,15 @@ public class Member {
     public void setJenisPaket(String jenisPaket) {
         this.jenisPaket = jenisPaket;
     }
+    
+    /**
+    Menghasilkan representasi teks dari objek member dengan rapi
+    Method ini menggantikan output bawaan yang hanya berupa alamat memori,
+    sehingga data member bisa langsung dibaca saat dicetak.
+    @return teks berisi nama, nomor telepon, tanggal daftar, dan jenis paket member
+    */
+    @Override 
+    public String toString() {
+        return  "Member [Nama = "+ nama + ", No Telepon = "+ noTelepon + ", Tanggal Daftar = "+ tanggalDaftar + ", Jenis Paket = "+ jenisPaket + "]";
+    }
 }
