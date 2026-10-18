@@ -3,6 +3,7 @@ Merepresentasikan satu member yang terdaftar di Sistem gym FitTrack.
 Class Member ini menyimpan beberapa data dari member beserta method getter dan setter nya
 */
 public class Member {
+    private static final String PREFIKS_PENOLAKAN = "Terjadi Kesalahan!";
     private String nama;
     private String noTelepon;
     private String tanggalDaftar;
@@ -95,5 +96,9 @@ public class Member {
     @Override 
     public String toString() {
         return  "Member [Nama = "+ nama + ", No Telepon = "+ noTelepon + ", Tanggal Daftar = "+ tanggalDaftar + ", Jenis Paket = "+ jenisPaket + "]";
+    }
+
+    private void cetakPenolakan (String alasan, String nilaiLama) {
+        System.out.println (PREFIKS_PENOLAKAN + alasan + " Nilai lama dipertahankan: " + nilaiLama);
     }
 }
