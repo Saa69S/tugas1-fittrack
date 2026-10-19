@@ -98,6 +98,12 @@ public class Member {
         return  "Member [Nama = "+ nama + ", No Telepon = "+ noTelepon + ", Tanggal Daftar = "+ tanggalDaftar + ", Jenis Paket = "+ jenisPaket + "]";
     }
 
+    /**
+    Mencetak pesan penolakan validasi ke layar dalam format yang seragam.
+    Pesan berisi alasan nilai ditolak dan nilai lama yang tetap dipertahankan,
+    @param alasan    penjelasan mengapa nilai yang dimasukkan ditolak
+    @param nilaiLama nilai atribut sebelumnya yang tetap dipakai setelah penolakan
+    */
     private void cetakPenolakan (String alasan, String nilaiLama) {
         System.out.println (PREFIKS_PENOLAKAN + alasan + " Nilai lama dipertahankan: " + nilaiLama);
     }
