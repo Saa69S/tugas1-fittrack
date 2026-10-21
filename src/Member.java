@@ -9,18 +9,18 @@ public class Member {
     private String tanggalDaftar;
     private String jenisPaket;
 
-    /**
-    Membuat member baru dengan data lengkap
-    @param nama                Nama Lengkap Member
-    @param noTelepon           Nomor Telepon Member
-    @param tanggalDaftar       Tanggal Pertama Kali Mendaftar 
-    @param jenisPaket          Jenis Paket Keanggotaan
+   /**
+    Membuat member baru dengan data lengkap. Setiap nilai dimasukkan lewat setter sehingga otomatis divalidasi.
+    @param nama nama lengkap member, tidak boleh kosong
+    @param noTelepon nomor telepon, diawali angka 0 dan minimal 10 digit
+    @param tanggalDaftar tanggal pertama kali mendaftar, contoh 17-08-2026
+    @param jenisPaket  jenis paket keanggotaan
     */
     public Member(String nama, String noTelepon, String tanggalDaftar, String jenisPaket) {
-        this.nama = nama;
-        this.noTelepon = noTelepon;
-        this.tanggalDaftar = tanggalDaftar;
-        this.jenisPaket = jenisPaket;
+        setNama(nama);
+        setNoTelepon(noTelepon);
+        setTanggalDaftar(tanggalDaftar);
+        setJenisPaket(jenisPaket);
     }
 
     /**
