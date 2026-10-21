@@ -32,12 +32,19 @@ public class Member {
     }
 
     /**
-    Membuat method setter nama untuk mengubah nama member
-    @param nama yaitu nama baru member
+    Mengubah nama member setelah melalui validasi.
+    Jika nama kosong, null, atau hanya berisi spasi, nama lama dipertahankan
+    dan pesan penolakan dicetak. Jika valid, nama disimpan setelah spasi di awal dan akhirnya dibuang.
+    @param nama nama baru member, tidak boleh kosong atau hanya berisi spasi
     */
     public void setNama(String nama) {
-        this.nama = nama;
+        if (nama == null || nama.trim().isEmpty()) {
+            cetakPenolakan("Nama Tidak Boleh Kosong", this.nama);
+            return;
+        }
+        this.nama = nama.trim();
     }
+    
     
     /**
     Membuat method getter NoTelepon untuk mengambil nomor telepon member
