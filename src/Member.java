@@ -117,4 +117,19 @@ public class Member {
     private void cetakPenolakan (String alasan, String nilaiLama) {
         System.out.println (PREFIKS_PENOLAKAN + alasan + " Nilai lama dipertahankan: " + nilaiLama);
     }
+
+    /**
+    Menghitung berapa karakter dalam teks yang bukan angka. Hasil 0 berarti seluruh karakter teks adalah angka.
+    @param teks teks yang diperiksa
+    @return jumlah karakter yang bukan angka
+    */
+    private int hitungKarakter(String teks) {
+        int jumlah = 0;
+        for (int i = 0; i < teks.length(); i++) {
+            if (!Character.isDigit(teks.charAt(i))) {
+                jumlah++;
+            }
+        }
+        return jumlah;
+    }
 }
