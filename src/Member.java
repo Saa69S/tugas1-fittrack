@@ -4,6 +4,9 @@ Class Member ini menyimpan beberapa data dari member beserta method getter dan s
 */
 public class Member {
     private static final String PREFIKS_PENOLAKAN = "Terjadi Kesalahan!";
+    private static final int MINIMAL_PANJANG_TELEPON = 10;
+    private static final String AWALAN_NOMOR_TELEPON = "0";
+    
     private String nama;
     private String noTelepon;
     private String tanggalDaftar;
