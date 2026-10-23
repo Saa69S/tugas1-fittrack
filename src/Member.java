@@ -74,13 +74,18 @@ public class Member {
     }
 
     /**
-    Membuat method setter TanggalDaftar untuk mengubah tanggal daftar member.
-    @param tanggalDaftar yaitu tanggal baru, contoh 17-08-2026
+    Mengubah tanggal daftar member setelah divalidasi
+    Jika tanggal kosong, tanggal lama dipertahankan dan pesan penolakan dicetak
+    @param tanggalDaftar tanggal baru, contoh 17-08-2026
     */
     public void setTanggalDaftar(String tanggalDaftar) {
-        this.tanggalDaftar = tanggalDaftar;
+        if (tanggalDaftar == null || tanggalDaftar.trim().isEmpty()) {
+            cetakPenolakan("Tanggal daftar tidak boleh kosong, contoh format: 17-08-2026", this.tanggalDaftar);
+            return;
+        }
+        this.tanggalDaftar = tanggalDaftar.trim();
     }
-
+    
     /**
     Membuat method getter JenisPaket untuk mengambil jenis paket member.
     @return yaitu mengembalikan nilai dari jenis paket keanggotaan
