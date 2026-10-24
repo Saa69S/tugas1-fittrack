@@ -58,10 +58,17 @@ public class Member {
     }
 
     /**
-    Membuat method setter NoTelepon untuk mengubah nomor telepon member
-    @param noTelepon yaitu nomor telepon baru
+    Mengubah nomor telepon member setelah melalui validasi format.
+    Jika nomor tidak diawali angka 0 atau kurang dari 10 digit, nomor lama dipertahankan dan pesan penolakan dicetak.
+    @param noTelepon nomor telepon baru, wajib diawali angka 0 dan memiliki panjang minimal 10 digit
     */
     public void setNoTelepon(String noTelepon) {
+        if (noTelepon == null
+            || !noTelepon.startsWith(AWALAN_NOMOR_TELEPON)
+            || noTelepon.length() < MINIMAL_PANJANG_TELEPON || hitungKarakter(noTelepon) > 0) {
+            cetakPenolakan("Nomor telepon wajib diawali angka " + AWALAN_NOMOR_TELEPON + ", dan minimal " + MINIMAL_PANJANG_TELEPON + " digit", this.noTelepon);
+            return;
+        }
         this.noTelepon = noTelepon;
     }
 
