@@ -6,6 +6,9 @@ public class Member {
     private static final String PREFIKS_PENOLAKAN = "Terjadi Kesalahan!";
     private static final int MINIMAL_PANJANG_TELEPON = 10;
     private static final String AWALAN_NOMOR_TELEPON = "0";
+    public static final String PAKET_BASIC = "Basic";
+    public static final String PAKET_PREMIUM = "Premium";
+    public static final String PAKET_VIP = "VIP";
     
     private String nama;
     private String noTelepon;
