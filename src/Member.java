@@ -105,10 +105,18 @@ public class Member {
     }
 
     /**
-    Membuat method setter JenisPaket untuk mengubah jenis paket member.
-    @param jenisPaket yaitu jenis paket baru
+    Mengubah jenis paket member setelah divalidasi. Jika bukan Basic,
+    Premium, atau VIP, paket lama dipertahankan dan pesan penolakan dicetak.
+    @param jenisPaket paket baru, penulisan harus persis
     */
     public void setJenisPaket(String jenisPaket) {
+        if (!PAKET_BASIC.equals(jenisPaket)
+                && !PAKET_PREMIUM.equals(jenisPaket)
+                && !PAKET_VIP.equals(jenisPaket)) {
+            cetakPenolakan("Jenis paket harus " + PAKET_BASIC + ", " + PAKET_PREMIUM
+                    + ", atau " + PAKET_VIP + " (penulisan persis)", this.jenisPaket);
+            return;
+        }
         this.jenisPaket = jenisPaket;
     }
     
