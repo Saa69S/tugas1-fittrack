@@ -13,6 +13,11 @@ public class Member {
     private static final String DEFAULT_NAMA = "Tanpa Nama";
     private static final String DEFAULT_NO_TELEPON = "-";
     private static final String DEFAULT_TANGGAL_DAFTAR = "-";
+
+    private String nama = DEFAULT_NAMA;
+    private String noTelepon = DEFAULT_NO_TELEPON;
+    private String tanggalDaftar = DEFAULT_TANGGAL_DAFTAR;
+    private String jenisPaket = PAKET_BASIC;
     
     private String nama;
     private String noTelepon;
