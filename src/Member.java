@@ -9,6 +9,10 @@ public class Member {
     public static final String PAKET_BASIC = "Basic";
     public static final String PAKET_PREMIUM = "Premium";
     public static final String PAKET_VIP = "VIP";
+
+    private static final String DEFAULT_NAMA = "Tanpa Nama";
+    private static final String DEFAULT_NO_TELEPON = "-";
+    private static final String DEFAULT_TANGGAL_DAFTAR = "-";
     
     private String nama;
     private String noTelepon;
