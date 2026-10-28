@@ -6,6 +6,7 @@ public class Member {
     private static final String PREFIKS_PENOLAKAN = "Terjadi Kesalahan!";
     private static final int MINIMAL_PANJANG_TELEPON = 10;
     private static final String AWALAN_NOMOR_TELEPON = "0";
+    
     public static final String PAKET_BASIC = "Basic";
     public static final String PAKET_PREMIUM = "Premium";
     public static final String PAKET_VIP = "VIP";
@@ -18,11 +19,6 @@ public class Member {
     private String noTelepon = DEFAULT_NO_TELEPON;
     private String tanggalDaftar = DEFAULT_TANGGAL_DAFTAR;
     private String jenisPaket = PAKET_BASIC;
-    
-    private String nama;
-    private String noTelepon;
-    private String tanggalDaftar;
-    private String jenisPaket;
 
    /**
     Membuat member baru dengan data lengkap. Setiap nilai dimasukkan lewat setter sehingga otomatis divalidasi.
@@ -36,6 +32,16 @@ public class Member {
         setNoTelepon(noTelepon);
         setTanggalDaftar(tanggalDaftar);
         setJenisPaket(jenisPaket);
+    }
+
+    /**
+    Membuat member baru tanpa memilih paket. Jenis paket otomatis Basic.
+    @param nama          nama lengkap member, tidak boleh kosong
+    @param noTelepon     nomor telepon, diawali angka 0 dan minimal 10 digit
+    @param tanggalDaftar tanggal pertama kali mendaftar, contoh 17-08-2026
+    */
+    public Member(String nama, String noTelepon, String tanggalDaftar) {
+        this(nama, noTelepon, tanggalDaftar, PAKET_BASIC);
     }
 
     /**
