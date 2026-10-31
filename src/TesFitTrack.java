@@ -13,6 +13,7 @@ public class TesFitTrack {
         Member[] daftarMember = new Member[JUMLAH_MEMBER];
         
         isiMemberValid(daftarMember);
+        cetakSemuaMember(daftarMember);
     }
     
     /**
@@ -25,5 +26,15 @@ public class TesFitTrack {
         daftarMember[1] = new Member("Kyandaru Annisa Putri", "081234567891", "20-08-2026", Member.PAKET_PREMIUM);
         daftarMember[2] = new Member("Najahal Khaira", "081234567892", "25-09-2026", Member.PAKET_VIP);
         daftarMember[3] = new Member("Raisa Fahira", "081234567893", "30-09-2026");
+    }
+
+    /**
+    Mencetak seluruh member dalam array memakai perulangan for
+    @param daftarMember array member yang akan dicetak
+    */
+    private static void cetakSemuaMember(Member[] daftarMember) {
+        for (int i = 0; i < daftarMember.length; i++) {
+            System.out.println((i + 1) + ". " + daftarMember[i]);
+        }
     }
 }
