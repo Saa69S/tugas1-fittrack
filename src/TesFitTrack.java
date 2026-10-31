@@ -3,7 +3,9 @@ Class pengujian untuk memverifikasi class Member.
 Membuat beberapa member dan menyimpannya dalam array.
 */
 public class TesFitTrack {
-    private static final int JUMLAH_MEMBER = 4;
+    private static final int JUMLAH_MEMBER = 5;
+    private static final String NO_TELEPON_SALAH = "81234";
+    private static final String PAKET_SALAH = "Gold";
 
     /**
     Titik masuk program: membuat member dan menyimpannya dalam array.
