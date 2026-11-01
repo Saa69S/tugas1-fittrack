@@ -14,10 +14,20 @@ public class TesFitTrack {
     */
     public static void main(String[] args) {
         Member[] daftarMember = new Member[JUMLAH_MEMBER];
-        
+
+        System.out.println("== Membuat member dengan data valid ==");
         isiMemberValid(daftarMember);
+
+        System.out.println();
+        System.out.println("== Membuat member dengan data tidak valid ==");
         isiMemberTidakValid(daftarMember);
+
+        System.out.println();
+        System.out.println("== Pengujian Setter dengan nilai tidak valid ==");
         ujiSetterTidakValid(daftarMember[0]);
+
+        System.out.println();
+        System.out.println("== Daftar Member ==");
         cetakSemuaMember(daftarMember);
     }
     
