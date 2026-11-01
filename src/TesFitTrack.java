@@ -6,6 +6,7 @@ public class TesFitTrack {
     private static final int JUMLAH_MEMBER = 5;
     private static final String NO_TELEPON_SALAH = "81234";
     private static final String PAKET_SALAH = "Gold";
+    private static final String NO_TELEPON_BARU_SALAH = "54321";
 
     /**
     Titik masuk program: membuat member dan menyimpannya dalam array.
@@ -16,6 +17,7 @@ public class TesFitTrack {
         
         isiMemberValid(daftarMember);
         isiMemberTidakValid(daftarMember);
+        ujiSetterTidakValid(daftarMember[0]);
         cetakSemuaMember(daftarMember);
     }
     
@@ -38,6 +40,16 @@ public class TesFitTrack {
     */
     private static void isiMemberTidakValid(Member[] daftarMember) {
         daftarMember[JUMLAH_MEMBER - 1] = new Member("Siti Tara Maisura", NO_TELEPON_SALAH, "05-10-2026", PAKET_SALAH);
+    }
+
+    /**
+    Memanggil setter dengan nilai tidak valid, lalu menampilkan nilai lama tetap bertahan
+    @param member member yang nomor teleponnya dicoba diubah
+    */
+    private static void ujiSetterTidakValid(Member member) {
+        System.out.println("Nomor telepon sebelum : " + member.getNoTelepon());
+        member.setNoTelepon(NO_TELEPON_BARU_SALAH);
+        System.out.println("Nomor telepon sesudah : " + member.getNoTelepon());
     }
 
     /**
